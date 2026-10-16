@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "kicad": "10.0.6",
+  "source": "User-confirmed saved main IRIS_C5_RevC.kicad_pcb (2026-10-16 18:33:46 +08:00)",
+  "before_sha256": "ba35554a9d44ef0e9f382b86aa1c48960371651088fa123e7c0d47e0377b98f3",
+  "after_sha256": "50352ad8f1dafc3c7b861436a7404bf7afee84123b50a44a4ce712bc81d03d96",
+  "before_geometry_sha256": "976dd208bca61421e6b371f1128f04d61ca572ffc508e3204a08772d3d9107df",
+  "after_geometry_sha256": "976dd208bca61421e6b371f1128f04d61ca572ffc508e3204a08772d3d9107df",
+  "footprints": 66,
+  "tracks_and_vias": 635,
+  "ground_zones": [
+    "F.Cu",
+    "B.Cu"
+  ],
+  "clearance_mm": 0.15,
+  "unchanged": [
+    "footprint position/rotation/value/library ID",
+    "all pad geometry and net assignments",
+    "all track/via geometry, widths, layers and nets",
+    "zone outlines, clearance, connection and island-removal settings",
+    "board outline"
+  ],
+  "metadata_only_change": "H1-H4 correctly marked board-only mechanical NPTH mounting holes; positions and geometry unchanged",
+  "DRC": {
+    "violations": 0,
+    "unconnected": 0,
+    "schematic_parity": 0
+  }
+}

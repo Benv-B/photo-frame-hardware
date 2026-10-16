@@ -1,0 +1,19 @@
+# KiCad local state and recovery files
+*.kicad_prl
+*.lck
+~*
+_autosave-*
+*-backups/
+.history/
+
+# Local runtimes and credentials
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+.env
+.env.*
+*.pem
+*.key
+Thumbs.db
+.DS_Store

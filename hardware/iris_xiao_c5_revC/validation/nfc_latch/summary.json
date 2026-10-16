@@ -1,0 +1,196 @@
+{
+  "date": "2026-10-16",
+  "simulator": "ngspice45.2 in Ubuntu WSL",
+  "recommendation": "Change C_COLD_OFF from1nF to47nF; keep other initially proposed latch values for prototype. Do not connect the AO3400A gate load to the original1nF version.",
+  "blocking_finding": "N_COL gate capacitance0.5-2nF makes the original1nF PNP base-emitter capacitor circuit latch ON during cold battery insertion without RF.10nF also fails at4.8V with2nF gate load.",
+  "selected_47nf": "All tested47nF cases passed.37.6nF(-20%) passed tested power-off/cold tests including5nF gate load;56.4nF(+20%) passed2V1ms trigger and immediate-GPIO-collapse tests at3.0/4.8V and-10/25/60C.",
+  "cases_total": 550,
+  "passed": 521,
+  "failed": 29,
+  "groups_by_ccold_nf": {
+    "1": {
+      "cases": 6,
+      "passed": 0,
+      "failed": 6,
+      "passing_set_delay_seconds": null,
+      "passing_clear_delay_seconds": null,
+      "failed_cases": [
+        "initial_c1_g0.5",
+        "initial_c1_g1",
+        "initial_c1_g2",
+        "check_BC847B_AS_PUBLISHED_c1",
+        "check_BC847B_Q_c1",
+        "check_BC847B_EMITTER_CORRECTED_c1"
+      ]
+    },
+    "10": {
+      "cases": 168,
+      "passed": 148,
+      "failed": 20,
+      "passing_set_delay_seconds": [
+        0.0002001864,
+        0.0003826256
+      ],
+      "passing_clear_delay_seconds": [
+        0.001322317,
+        0.001656656
+      ],
+      "failed_cases": [
+        "initial_c10_g2",
+        "cold_c10_g2_v4.8_r1e-06_t-10",
+        "cold_c10_g2_v4.8_r1e-06_t25",
+        "cold_c10_g2_v4.8_r1e-06_t60",
+        "cold_c10_g2_v4.8_r0.001_t60",
+        "bounce_c10_g2_v4.8_t-10",
+        "bounce_c10_g2_v4.8_t25",
+        "bounce_c10_g2_v4.8_t60",
+        "rf_c10_g2_v4.8_t-10_w1",
+        "rf_c10_g2_v4.8_t-10_w5",
+        "rf_c10_g2_v4.8_t-10_w10",
+        "rf_c10_g2_v4.8_t25_w1",
+        "rf_c10_g2_v4.8_t25_w5",
+        "rf_c10_g2_v4.8_t25_w10",
+        "rf_c10_g2_v4.8_t60_w1",
+        "rf_c10_g2_v4.8_t60_w5",
+        "rf_c10_g2_v4.8_t60_w10",
+        "check_BC847B_AS_PUBLISHED_c10",
+        "check_BC847B_Q_c10",
+        "check_BC847B_EMITTER_CORRECTED_c10"
+      ]
+    },
+    "17.6": {
+      "cases": 9,
+      "passed": 7,
+      "failed": 2,
+      "passing_set_delay_seconds": [
+        0.0002582346,
+        0.0004799601
+      ],
+      "passing_clear_delay_seconds": [
+        0.001572801,
+        0.001892522
+      ],
+      "failed_cases": [
+        "tolerance_c17.6_g3",
+        "tolerance_c17.6_g5"
+      ]
+    },
+    "22": {
+      "cases": 177,
+      "passed": 176,
+      "failed": 1,
+      "passing_set_delay_seconds": [
+        0.0002732246,
+        0.0005353575
+      ],
+      "passing_clear_delay_seconds": [
+        0.001425646,
+        0.001945125
+      ],
+      "failed_cases": [
+        "tolerance_c22_g5"
+      ]
+    },
+    "37.6": {
+      "cases": 9,
+      "passed": 9,
+      "failed": 0,
+      "passing_set_delay_seconds": [
+        0.0003752907,
+        0.0007276739
+      ],
+      "passing_clear_delay_seconds": [
+        0.001730757,
+        0.002152323
+      ],
+      "failed_cases": []
+    },
+    "47": {
+      "cases": 175,
+      "passed": 175,
+      "failed": 0,
+      "passing_set_delay_seconds": [
+        0.0004181655,
+        0.0008410298
+      ],
+      "passing_clear_delay_seconds": [
+        0.001641761,
+        0.002297518
+      ],
+      "failed_cases": []
+    },
+    "56.4": {
+      "cases": 6,
+      "passed": 6,
+      "failed": 0,
+      "passing_set_delay_seconds": [
+        0.0004796116,
+        0.0009529689
+      ],
+      "passing_clear_delay_seconds": [
+        0.001894896,
+        0.002436278
+      ],
+      "failed_cases": []
+    }
+  },
+  "tested": {
+    "battery_V": [
+      3.0,
+      4.8
+    ],
+    "temperatures_C": [
+      -10,
+      25,
+      60
+    ],
+    "battery_linear_rise_s": [
+      1e-06,
+      0.001,
+      0.01,
+      0.1,
+      1
+    ],
+    "bounce": "1ms insertion;0.5ms on/off contacts repeated before final insertion at4ms; edges1us",
+    "N_COL_gate_capacitance_nF": [
+      0.5,
+      1,
+      2
+    ],
+    "additional_typical_temperature_gate_cap_margin_nF": [
+      3,
+      5
+    ],
+    "EN_load": "100k pulldown plus converter-equivalent10Meg load and10nF capacitor; positive-feedback100k also loads EN",
+    "RF": "2V open-circuit Thevenin source,1k source impedance, switched on for1/5/10ms;180nF EH output capacitor and470k bleeder. This is an assumed source, not an NTAG or iPhone model.",
+    "hold": "EN sampled at600ms, after RF source disconnected at21-30ms",
+    "clear": "GPIO3.3V pulse begins700ms; EN checked740ms. Normal pulse width2ms. Additional behavioral driver has20ms command width but forces GPIO to0 immediately when EN falls below0.4V, stressing clear-hold behavior.",
+    "acceptance": "Cold EN peak<0.4V; held EN>90%VBAT; final EN<0.4V"
+  },
+  "models": {
+    "BC847B_source": "https://assets.nexperia.com/documents/spice-model/BC847B.txt",
+    "BC857C_source": "https://assets.nexperia.com/documents/spice-model/BC857C.txt",
+    "BC847B_Q_source": "https://assets.nexperia.com/documents/spice-model/BC847B-Q.txt",
+    "parameter_storage": "models.lib generated reproducibly byrun_sim.py from transcribed official parameter values",
+    "correction": "Official BC847B Q2 emitter is33, an otherwise floating node; default study uses3. This apparent typo correction is not manufacturer-confirmed. Original model and newer unmodified BC847B-Q were cross-checked on representative1/10/22/47nF cases and showed the same startup/hold/clear pass/fail conclusions.",
+    "diode": "Generic silicon switching diode model; not a manufacturer-qualified1N4148W model",
+    "AO3400A": "Only represented by linear gate capacitance toGND. No nonlinear gate-charge or drain-Miller model.",
+    "pin_mapping": "SPICE C,B,E differs from physical SOT23 pins1B,2E,3C."
+  },
+  "remaining_validation": [
+    "Use actual iPhone, matched NTAG antenna and measured VOUT: this simulation does not establish RF range or minimum phone field duration.",
+    "Capture cold insertion/contact bounce and shutdown with actual AO3400A, converter output, USB isolation and board parasitics.",
+    "The47nF value provides modeled margin, not a power-supervisor-certified reset guarantee. No manufacturing/process Monte Carlo was performed.",
+    "Verify discharge branch position relative toUSB blocking soUSB power is not continuously discharged while battery latch isOFF.",
+    "Firmware checks RF_FIELD_PRESENT viaI2C NS_REG bit0 and waits for continuous field absence before clearing;FD pin may remain unconnected.",
+    "This latch contains no precision battery undervoltage cutoff or independent stuck-ON timeout."
+  ],
+  "files": {
+    "source": "run_sim.py",
+    "model_library": "models.lib",
+    "summary_plot": "latch_validation.png",
+    "per_case_inputs": "*.cir",
+    "per_case_logs": "*.log",
+    "all_stage_results": "*_results.json"
+  }
+}

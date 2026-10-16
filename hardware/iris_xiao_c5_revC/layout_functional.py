@@ -1,0 +1,207 @@
+"""Placement and wires only. Component data is frozen in design_manifest.json."""
+BASE={cc['ref']:cc for cc in json.loads((ROOT/'design_manifest.json').read_text())}
+used_refs=set()
+
+def add(pg,ref,x,y,rot=0):
+    cc=BASE[ref];key=cc['key']
+    if key=='power:PWR_FLAG':getstock('power','PWR_FLAG')
+    pg.wired.update((ref,pp['num']) for pp in cc['pins'])
+    assert ref not in used_refs,ref
+    used_refs.add(ref)
+    return pg.add(ref,key,cc['value'],x,y,{pp['num']:pp['net'] for pp in cc['pins']},rot,cc['footprint'],cc['note'])
+
+def at(pg,ref,pin):return pg.positions[ref][str(pin)]
+def w(pg,*pts):
+    for a,b in zip(pts,pts[1:]):pg.wire(a,b)
+def j(pg,*pts):
+    for pt in pts:pg.items.append(f'(junction (at {pt[0]} {pt[1]}) (diameter 0) (color 0 0 0 0) (uuid {pg.uuid()}))')
+def label(pg,xy,name,ang=0):pg.label(xy,name,ang)
+def port(pg,ref,pin,net=None,direction='L',length=5.08):
+    xy=at(pg,ref,pin);dx,dy={'L':(-length,0),'R':(length,0),'U':(0,-length),'D':(0,length)}[direction]
+    end=(round(xy[0]+dx,4),round(xy[1]+dy,4));w(pg,xy,end)
+    if net is None:net=next(pp['net'] for pp in BASE[ref]['pins'] if pp['num']==str(pin))
+    label(pg,end,net,180 if direction=='L' else 0)
+    return end
+def g(pg,ref,pin,drop=5.08):return port(pg,ref,pin,'GND','D',drop)
+def vto(pg,ref,pin,y):
+    xy=at(pg,ref,pin);end=(xy[0],y);w(pg,xy,end);return end
+def hto(pg,ref,pin,x):
+    xy=at(pg,ref,pin);end=(x,xy[1]);w(pg,xy,end);return end
+def connect(pg,a,pa,b,pb,*via):w(pg,at(pg,a,pa),*via,at(pg,b,pb))
+def heading(pg,x,y,s):pg.text(x,y,s,1.4)
+
+# Connector graphics face the direction of power flow; numbers/types are unchanged.
+TERM=chip('Battery_Wires',[],[(1,'BAT+','passive'),(2,'BAT-','passive')],width=15.24)
+ANT=chip('External_NFC_Antenna',[],[(1,'LA','passive'),(2,'LB','passive')],width=20.32)
+
+p=Page(PROJECT,'01 - Battery, boost and shared system power',1)
+heading(p,12.7,17.78,'3 x AA ALKALINE  /  SHARED POWER  /  APPROX. 5.3 V OUTPUT')
+heading(p,15.24,25.4,'Battery input + reverse protection')
+heading(p,111.76,25.4,'U1  Synchronous boost')
+heading(p,210.82,25.4,'U2  Controlled system rail')
+add(p,'J1',25.4,50.8);add(p,'F1',49.53,49.53,90);add(p,'Q1',71.12,52.07,90)
+connect(p,'J1',1,'F1',1);connect(p,'F1',2,'Q1',3)
+g(p,'J1',2,10.16);g(p,'Q1',1,7.62)
+add(p,'U1',139.7,58.42);add(p,'L1',139.7,35.56,90)
+add(p,'C1',91.44,76.2);add(p,'C2',105.41,76.2)
+vb=at(p,'U1',3)[1]
+w(p,at(p,'Q1',2),(83.82,49.53),(83.82,vb),at(p,'U1',3))
+for r in ['C1','C2']:j(p,vto(p,r,1,vb));g(p,r,2)
+label(p,(83.82,vb),'VBAT',180)
+w(p,(114.3,vb),(114.3,35.56),at(p,'L1',1));j(p,(114.3,vb))
+w(p,at(p,'L1',2),(165.1,35.56),(165.1,at(p,'U1',5)[1]),at(p,'U1',5))
+port(p,'U1',2,'EN_LATCH','L',5.08);g(p,'U1',4,10.16)
+add(p,'U2',233.68,58.42)
+boost=at(p,'U1',6)
+w(p,boost,(208.28,boost[1]));label(p,(180.34,boost[1]),'5V_BOOST')
+for pin in [1,2,4]:
+    xy=at(p,'U2',pin);w(p,xy,(208.28,xy[1]))
+w(p,(208.28,at(p,'U2',1)[1]),(208.28,at(p,'U2',4)[1]));j(p,(208.28,boost[1]),(208.28,at(p,'U2',2)[1]))
+for ref,x in [('C3',177.8),('C4',190.5),('C5',203.2)]:
+    add(p,ref,x,88.9 if ref=='C4' else 76.2);j(p,vto(p,ref,1,boost[1]));g(p,ref,2)
+port(p,'U2',3,'EN_LATCH','L',5.08)
+add(p,'R1',139.7,109.22);add(p,'R2',139.7,132.08)
+w(p,at(p,'R1',1),(149.86,105.41),(149.86,87.63),(167.64,87.63),(167.64,boost[1]));j(p,(167.64,boost[1]))
+connect(p,'R1',2,'R2',1)
+w(p,at(p,'U1',1),(119.38,at(p,'U1',1)[1]),(119.38,120.65),(139.7,120.65));j(p,(139.7,120.65));label(p,(119.38,120.65),'FB',180);g(p,'R2',2)
+for pin in [7,8]:hto(p,'U2',pin,259.08)
+w(p,(259.08,at(p,'U2',7)[1]),(259.08,at(p,'U2',8)[1]));j(p,(259.08,at(p,'U2',7)[1]))
+w(p,(259.08,at(p,'U2',7)[1]),(281.94,at(p,'U2',7)[1]));label(p,(269.24,at(p,'U2',7)[1]),'5V_SYS')
+add(p,'C7',274.32,76.2);j(p,vto(p,'C7',1,at(p,'U2',7)[1]));g(p,'C7',2)
+add(p,'C6',259.08,96.52);w(p,at(p,'U2',6),(259.08,at(p,'U2',6)[1]),at(p,'C6',1));g(p,'C6',2)
+for pin in [5,9]:vto(p,'U2',pin,80.01)
+w(p,(at(p,'U2',5)[0],80.01),(at(p,'U2',9)[0],80.01));label(p,(at(p,'U2',9)[0],80.01),'GND')
+add(p,'R4',236.22,121.92);add(p,'Q2',233.68,142.24)
+w(p,(281.94,at(p,'U2',7)[1]),(281.94,111.76),(236.22,111.76),at(p,'R4',1))
+connect(p,'R4',2,'Q2',3);g(p,'Q2',2);port(p,'Q2',1,'N_COL','L',7.62)
+heading(p,15.24,114.3,'XIAO feed / USB reverse-current blocking')
+add(p,'D1',48.26,137.16,180);add(p,'JP1',86.36,137.16)
+port(p,'D1',2,'5V_SYS','L',10.16);connect(p,'D1',1,'JP1',1);port(p,'JP1',2,'XIAO_5V','R',7.62)
+p.text(15.24,153.67,'JP1 closed: battery use.  JP1 open: USB debug.',1.2)
+p.text(15.24,161.29,'Keep AA away from the XIAO lithium BAT pad.',1.2)
+p.text(15.24,168.91,'C6 / R4 / F1 are prototype choices; measure loaded edges and surge.',1.1)
+p.text(15.24,176.53,'TCON: 5.0-5.5V; rise/fall 0.5-10ms; off interval >=50ms.',1.1)
+for ref,net,x in [('#FLG01','GND',120.65),('#FLG02','VBAT',140.97),('#FLG03','XIAO_5V',161.29)]:
+    add(p,ref,x,151.13);port(p,ref,1,net,'D',5.08)
+
+n=Page('02_NFC_Latch','02 - Passive NFC wake and hardware power latch',2)
+heading(n,12.7,17.78,'NFC RF TRIGGER  /  BATTERY POWER HOLD  /  SOFTWARE OFF')
+heading(n,15.24,22.86,'U3  Passive tag + antenna / I2C pullups')
+heading(n,139.7,17.78,'Q3 / Q4  SET and hold')
+add(n,'J2',22.86,45.72);add(n,'U3',76.2,46.99);add(n,'C10',50.8,30.48)
+connect(n,'J2',1,'U3',1);connect(n,'J2',2,'U3',8)
+w(n,at(n,'C10',1),(43.18,26.67),(43.18,44.45));j(n,(43.18,44.45));j(n,vto(n,'C10',2,46.99))
+add(n,'C8',83.82,30.48)
+w(n,at(n,'U3',6),(76.2,26.67),(83.82,26.67),at(n,'C8',1));label(n,(76.2,26.67),'3V3_SYS',180);g(n,'C8',2,3.81);g(n,'U3',2)
+add(n,'R24',101.6,30.48);add(n,'R23',116.84,30.48)
+w(n,at(n,'R24',1),(101.6,21.59),(116.84,21.59),at(n,'R23',1));label(n,(101.6,21.59),'3V3_SYS',180)
+w(n,at(n,'U3',3),(101.6,at(n,'U3',3)[1]),at(n,'R24',2));label(n,(101.6,at(n,'U3',3)[1]),'NFC_SCL')
+w(n,at(n,'U3',5),(116.84,at(n,'U3',5)[1]),at(n,'R23',2));label(n,(116.84,at(n,'U3',5)[1]),'NFC_SDA')
+add(n,'C9',50.8,91.44);add(n,'R6',68.58,91.44);add(n,'D2',93.98,76.2,180);add(n,'R5',120.65,76.2,90)
+w(n,at(n,'U3',7),(55.88,at(n,'U3',7)[1]),(55.88,76.2),(43.18,76.2),at(n,'D2',2));j(n,(55.88,76.2));label(n,(43.18,76.2),'RF_EH',180)
+for ref in ['C9','R6']:j(n,vto(n,ref,1,76.2));g(n,ref,2)
+connect(n,'D2',1,'R5',1)
+add(n,'Q3',152.4,76.2);add(n,'Q4',175.26,35.56,180)
+add(n,'R8',185.42,55.88,270);add(n,'R7',208.28,35.56);add(n,'C11',228.6,35.56)
+w(n,(165.1,22.86),(228.6,22.86));label(n,(165.1,22.86),'VBAT',180)
+for ref,pin in [('Q4',2),('R7',1),('C11',1)]:j(n,vto(n,ref,pin,22.86))
+w(n,at(n,'Q4',1),(195.58,35.56),(195.58,55.88),at(n,'R8',1))
+w(n,at(n,'R8',1),(228.6,55.88))
+for ref in ['R7','C11']:j(n,vto(n,ref,2,55.88))
+j(n,(195.58,55.88));label(n,(228.6,55.88),'P_BASE')
+w(n,at(n,'R8',2),(154.94,55.88),at(n,'Q3',3));label(n,(154.94,55.88),'N_COL',180)
+connect(n,'R5',2,'Q3',1);g(n,'Q3',2)
+add(n,'R9',156.21,100.33,270);add(n,'R10',137.16,115.57)
+w(n,at(n,'Q4',3),(172.72,100.33),at(n,'R9',1))
+w(n,at(n,'R9',2),(137.16,100.33),(137.16,76.2));j(n,(137.16,76.2))
+w(n,(137.16,100.33),at(n,'R10',1));j(n,(137.16,100.33));label(n,(137.16,100.33),'SET_BASE',180);g(n,'R10',2)
+add(n,'R11',190.5,105.41);add(n,'C12',210.82,105.41)
+w(n,(172.72,90.17),(210.82,90.17));j(n,(172.72,90.17));label(n,(210.82,90.17),'EN_LATCH')
+for ref in ['R11','C12']:j(n,vto(n,ref,1,90.17));g(n,ref,2)
+heading(n,15.24,121.92,'Manual wake (SET only)')
+add(n,'SW1',43.18,137.16);add(n,'R14',72.39,137.16,90)
+port(n,'SW1',1,'VBAT','L');connect(n,'SW1',2,'R14',1);port(n,'R14',2,'SET_BASE','R')
+heading(n,176.53,121.92,'Q5  Software clear')
+add(n,'Q5',228.6,137.16);add(n,'R12',187.96,137.16,90)
+add(n,'R13',208.28,153.67);add(n,'C13',231.14,153.67);add(n,'R27',170.18,153.67)
+port(n,'Q5',3,'SET_BASE','U',3.81);g(n,'Q5',2,2.54)
+connect(n,'R12',2,'Q5',1);j(n,vto(n,'R13',1,137.16))
+w(n,at(n,'C13',1),(219.71,at(n,'C13',1)[1]),(219.71,137.16));j(n,(219.71,137.16))
+w(n,at(n,'R12',1),(170.18,137.16));label(n,(170.18,137.16),'PWR_OFF',180);j(n,vto(n,'R27',1,137.16))
+for ref in ['R13','C13','R27']:g(n,ref,2,3.81)
+n.text(15.24,156.21,'RF supplies the trigger only; AA supplies Wi-Fi and TCON.',1.2)
+n.text(15.24,163.83,'C11 = 47nF. Verify cold insertion and battery-contact bounce.',1.1)
+n.text(15.24,171.45,'RF_EH total C: 150-220nF. FD is unused; read RF status by I2C.',1.1)
+n.text(15.24,179.07,'Finish refresh -> BUS_EN=0 -> RF absent >=500ms -> PWR_OFF=1.',1.1)
+
+c=Page('03_Controller_FPC','03 - XIAO controller, SPI isolation and FPC',3)
+heading(c,12.7,17.78,'XIAO ESP32-C5  /  3.3 V SPI  /  IRIS 39-PIN FPC')
+add(c,'U4',55.88,55.88);add(c,'U5',144.78,55.88);add(c,'J3',246.38,57.15)
+# XIAO external signal ports, with the CS pullup directly attached.
+for pin in range(1,12):
+    if pin not in (3,7):port(c,'U4',pin,direction='L',length=7.62)
+add(c,'R25',22.86,27.94);port(c,'R25',1,'3V3_SYS','U',2.54)
+w(c,at(c,'R25',2),(22.86,at(c,'U4',2)[1]));j(c,(22.86,at(c,'U4',2)[1]))
+port(c,'U4',14,'XIAO_5V','R')
+for pin in [12,22]:hto(c,'U4',pin,91.44)
+w(c,(91.44,at(c,'U4',12)[1]),(91.44,at(c,'U4',22)[1]));label(c,(91.44,at(c,'U4',12)[1]),'3V3_SYS')
+for pin in [13,18,24]:vto(c,'U4',pin,81.28)
+w(c,(50.8,81.28),(60.96,81.28));j(c,(55.88,81.28));label(c,(60.96,81.28),'GND')
+add(c,'R28',81.28,101.6,90);add(c,'R29',101.6,119.38);add(c,'C15',116.84,119.38)
+port(c,'R28',1,'EN_LATCH','L')
+w(c,at(c,'U4',16),(96.52,at(c,'U4',16)[1]),(96.52,101.6),at(c,'R28',2))
+w(c,(96.52,101.6),(116.84,101.6));j(c,(96.52,101.6));label(c,(116.84,101.6),'BAT_ADC')
+for ref in ['R29','C15']:j(c,vto(c,ref,1,101.6));g(c,ref,2)
+heading(c,15.24,93.98,'Battery sense / GPIO5 bottom pad 16')
+c.text(15.24,109.22,'Calibrate latch voltage drop.',1.1)
+# Bus supply, series terminations and ports.
+add(c,'C14',162.56,25.4)
+w(c,at(c,'U5',20),(144.78,21.59),at(c,'C14',1));label(c,(144.78,21.59),'3V3_SYS',180);g(c,'C14',2,3.81);g(c,'U5',10)
+for pin in [2,3,4,5,6]:port(c,'U5',pin,direction='L',length=5.08)
+add(c,'R18',189.23,31.75,90);add(c,'R19',189.23,44.45,90);add(c,'R20',189.23,68.58,90)
+w(c,at(c,'U5',18),(177.8,at(c,'U5',18)[1]),(177.8,31.75),at(c,'R18',1));port(c,'R18',2,'FPC_SCLK','R',7.62)
+w(c,at(c,'U5',17),(180.34,at(c,'U5',17)[1]),(180.34,44.45),at(c,'R19',1));port(c,'R19',2,'FPC_MOSI','R',7.62)
+port(c,'U5',16,'FPC_MISO','R');port(c,'U5',14,'FPC_INT','R')
+w(c,at(c,'U5',15),(167.64,at(c,'U5',15)[1]),(167.64,68.58),at(c,'R20',1));port(c,'R20',2,'FPC_CS_N','R',7.62)
+# Firmware-only bus enable: reset pulldown keeps the bus isolated.
+heading(c,142.24,93.98,'Firmware BUS_EN / default isolated')
+add(c,'R15',172.72,106.68);add(c,'Q7',170.18,129.54)
+port(c,'R15',1,'3V3_SYS','U');connect(c,'R15',2,'Q7',3)
+w(c,at(c,'U5',19),(121.92,at(c,'U5',19)[1]),(121.92,116.84),(172.72,116.84));j(c,(172.72,116.84));label(c,(172.72,116.84),'BUS_OE_N')
+g(c,'Q7',2)
+add(c,'R16',152.4,146.05)
+w(c,at(c,'Q7',1),(152.4,129.54),at(c,'R16',1));label(c,(152.4,129.54),'BUS_EN',180);g(c,'R16',2,3.81)
+c.text(15.24,146.05,'No PG circuit. D2 / GPIO25 is unused.',1.15)
+c.text(15.24,153.67,'Keep BUS_EN low until supply startup delay has elapsed.',1.15)
+c.text(15.24,161.29,'USB-only debug: JP1 open, BUS_EN remains low.',1.15)
+# FPC power/ground bundling. Unused pins stay explicitly NC.
+for pin in range(1,7):hto(c,'J3',pin,223.52)
+w(c,(223.52,at(c,'J3',1)[1]),(223.52,at(c,'J3',6)[1]));
+for pin in range(2,6):j(c,(223.52,at(c,'J3',pin)[1]))
+label(c,(223.52,at(c,'J3',1)[1]),'5V_SYS',180)
+for pin in [7,10,13,16,19]:hto(c,'J3',pin,218.44)
+w(c,(218.44,at(c,'J3',7)[1]),(218.44,at(c,'J3',19)[1]))
+for pin in [10,13,16]:j(c,(218.44,at(c,'J3',pin)[1]))
+label(c,(218.44,at(c,'J3',19)[1]),'GND',180)
+for pin in [22,25]:port(c,'J3',pin,'GND','R')
+for pin in [24,34,35,36]:port(c,'J3',pin,direction='R')
+add(c,'R26',271.78,at(c,'J3',31)[1],90);connect(c,'J3',31,'R26',1);port(c,'R26',2,'GND','R',2.54)
+add(c,'R21',245.11,99.06);add(c,'R22',245.11,121.92)
+port(c,'R21',1,'5V_SYS','U');connect(c,'R21',2,'R22',1);g(c,'R22',2)
+w(c,at(c,'J3',37),(279.4,at(c,'J3',37)[1]),(279.4,110.49),(245.11,110.49));j(c,(245.11,110.49));label(c,(245.11,110.49),'FPC_CS_N',180)
+c.text(205.74,139.7,'CS idle ~3.15V; verify leakage / VIH.',1.1)
+c.text(205.74,147.32,'NC / LVDS pins remain open.',1.1)
+c.text(15.24,184.15,'SPI payload: IRIS commands + BGR888 pixels. Firmware controls bus enable.',1.1)
+
+assert used_refs==set(BASE),(set(BASE)-used_refs,used_refs-set(BASE))
+# Place text in the clear corridor beside closely spaced capacitor branches.
+for pg,ref,dx,dy in [(p,'C1',-15.24,0),(p,'C5',-15.24,0),(p,'C7',-15.24,0),(p,'Q1',0,-3.81)]:
+    for ii,item in enumerate(pg.items):
+        if not item.startswith('(symbol '):continue
+        node=parse(item)
+        if not any(pp[1]=='Reference' and pp[2]==ref for pp in kids(node,'property')):continue
+        pattern=r'(\(property "(?:Reference|Value)" "(?:[^"\\]|\\.)*" \(at )([-0-9.]+) ([-0-9.]+)( [-0-9.]+\))'
+        pg.items[ii]=re.sub(pattern,lambda m:m[1]+str(round(float(m[2])+dx,4))+' '+str(round(float(m[3])+dy,4))+m[4],item)
+for i,s in enumerate(PAGES[1:]):
+    x=15.24+i*73.66;y=185.42;sheetid=uid('sheet/'+s.name)
+    p.items.append(f'(sheet (at {x} {y}) (size 63.5 8.89) (stroke (width 0) (type default)) (fill (color 0 0 0 0)) (uuid {sheetid}) (property "Sheetname" {q(s.name)} (at {x} {y-1} 0) {effects(1,"(justify left)")}) (property "Sheetfile" {q(s.name+".kicad_sch")} (at {x} {y+10.16} 0) {effects(.7,"(justify left)")}) (instances (project {q(PROJECT)} (path {q('/'+ROOTID)} (page {q(s.num)})))))')

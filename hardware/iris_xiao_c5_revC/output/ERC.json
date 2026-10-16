@@ -1,0 +1,28 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-16T17:21:26+0800",
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "9.0.8",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500",
+            "violations": []
+        },
+        {
+            "path": "/02_NFC_Latch/",
+            "uuid_path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f",
+            "violations": []
+        },
+        {
+            "path": "/03_Controller_FPC/",
+            "uuid_path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb",
+            "violations": []
+        }
+    ],
+    "source": "IRIS_C5_RevC.kicad_sch"
+}

@@ -1,0 +1,684 @@
+{
+  "result": "PASS",
+  "physical_components_before": 66,
+  "physical_components_after": 62,
+  "removed_references": [
+    "Q6",
+    "Q8",
+    "R17",
+    "R3"
+  ],
+  "added_references": [],
+  "modified_references": [
+    "L1",
+    "Q7",
+    "R1",
+    "U1",
+    "U2",
+    "U3",
+    "U4"
+  ],
+  "unchanged_components": 55,
+  "changes": {
+    "U2": {
+      "before": {
+        "value": "TPS22975DSGR",
+        "footprint": "IRIS_Local:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm",
+        "pins": {
+          "1": {
+            "name": "VIN",
+            "net": "5V_BOOST",
+            "type": "power_in"
+          },
+          "2": {
+            "name": "VIN",
+            "net": "5V_BOOST",
+            "type": "passive"
+          },
+          "4": {
+            "name": "VBIAS",
+            "net": "5V_BOOST",
+            "type": "power_in"
+          },
+          "3": {
+            "name": "ON",
+            "net": "BOOST_PG",
+            "type": "input"
+          },
+          "7": {
+            "name": "VOUT",
+            "net": "5V_SYS",
+            "type": "power_out"
+          },
+          "8": {
+            "name": "VOUT",
+            "net": "5V_SYS",
+            "type": "passive"
+          },
+          "6": {
+            "name": "CT",
+            "net": "CT_SYS",
+            "type": "passive"
+          },
+          "5": {
+            "name": "GND",
+            "net": "GND",
+            "type": "power_in"
+          },
+          "9": {
+            "name": "EP",
+            "net": "GND",
+            "type": "power_in"
+          }
+        }
+      },
+      "after": {
+        "value": "TPS22975DSGR",
+        "footprint": "IRIS_Local:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm",
+        "pins": {
+          "1": {
+            "name": "VIN",
+            "net": "5V_BOOST",
+            "type": "power_in"
+          },
+          "2": {
+            "name": "VIN",
+            "net": "5V_BOOST",
+            "type": "passive"
+          },
+          "4": {
+            "name": "VBIAS",
+            "net": "5V_BOOST",
+            "type": "power_in"
+          },
+          "3": {
+            "name": "ON",
+            "net": "EN_LATCH",
+            "type": "input"
+          },
+          "7": {
+            "name": "VOUT",
+            "net": "5V_SYS",
+            "type": "power_out"
+          },
+          "8": {
+            "name": "VOUT",
+            "net": "5V_SYS",
+            "type": "passive"
+          },
+          "6": {
+            "name": "CT",
+            "net": "CT_SYS",
+            "type": "passive"
+          },
+          "5": {
+            "name": "GND",
+            "net": "GND",
+            "type": "power_in"
+          },
+          "9": {
+            "name": "EP",
+            "net": "GND",
+            "type": "power_in"
+          }
+        }
+      }
+    },
+    "R1": {
+      "before": {
+        "value": "775k 0.1%",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": {
+            "name": "~",
+            "net": "5V_BOOST",
+            "type": "passive"
+          },
+          "2": {
+            "name": "~",
+            "net": "FB",
+            "type": "passive"
+          }
+        }
+      },
+      "after": {
+        "value": "787k 0.1%",
+        "footprint": "Resistor_SMD:R_0603_1608Metric",
+        "pins": {
+          "1": {
+            "name": "~",
+            "net": "5V_BOOST",
+            "type": "passive"
+          },
+          "2": {
+            "name": "~",
+            "net": "FB",
+            "type": "passive"
+          }
+        }
+      }
+    },
+    "U1": {
+      "before": {
+        "value": "TPS61033DRLR",
+        "footprint": "Package_TO_SOT_SMD:SOT-583-8",
+        "pins": {
+          "1": {
+            "name": "VIN",
+            "net": "VBAT",
+            "type": "power_in"
+          },
+          "2": {
+            "name": "EN",
+            "net": "EN_LATCH",
+            "type": "input"
+          },
+          "3": {
+            "name": "MODE",
+            "net": "GND",
+            "type": "input"
+          },
+          "5": {
+            "name": "FB",
+            "net": "FB",
+            "type": "input"
+          },
+          "7": {
+            "name": "SW",
+            "net": "SW",
+            "type": "power_out"
+          },
+          "8": {
+            "name": "VOUT",
+            "net": "5V_BOOST",
+            "type": "power_out"
+          },
+          "4": {
+            "name": "PG",
+            "net": "BOOST_PG",
+            "type": "open_collector"
+          },
+          "6": {
+            "name": "GND",
+            "net": "GND",
+            "type": "power_in"
+          }
+        }
+      },
+      "after": {
+        "value": "TPS61023DRLR",
+        "footprint": "IRIS_Local:TI_DRL0006A",
+        "pins": {
+          "3": {
+            "name": "VIN",
+            "net": "VBAT",
+            "type": "power_in"
+          },
+          "2": {
+            "name": "EN",
+            "net": "EN_LATCH",
+            "type": "input"
+          },
+          "1": {
+            "name": "FB",
+            "net": "FB",
+            "type": "input"
+          },
+          "5": {
+            "name": "SW",
+            "net": "SW",
+            "type": "power_out"
+          },
+          "6": {
+            "name": "VOUT",
+            "net": "5V_BOOST",
+            "type": "power_out"
+          },
+          "4": {
+            "name": "GND",
+            "net": "GND",
+            "type": "power_in"
+          }
+        }
+      }
+    },
+    "U4": {
+      "before": {
+        "value": "XIAO ESP32-C5 V1.1",
+        "footprint": "IRIS_Local:XIAO-ESP32-C5-SMD",
+        "pins": {
+          "1": {
+            "name": "D0_GPIO1",
+            "net": "PWR_OFF",
+            "type": "bidirectional"
+          },
+          "2": {
+            "name": "D1_GPIO0",
+            "net": "SPI_CS_N",
+            "type": "bidirectional"
+          },
+          "3": {
+            "name": "D2_GPIO25",
+            "net": "PG_N",
+            "type": "bidirectional"
+          },
+          "4": {
+            "name": "D3_GPIO7",
+            "net": "BUS_EN",
+            "type": "bidirectional"
+          },
+          "5": {
+            "name": "D4_GPIO23",
+            "net": "NFC_SDA",
+            "type": "bidirectional"
+          },
+          "6": {
+            "name": "D5_GPIO24",
+            "net": "NFC_SCL",
+            "type": "bidirectional"
+          },
+          "7": {
+            "name": "D6_GPIO11",
+            "net": null,
+            "type": "bidirectional"
+          },
+          "8": {
+            "name": "D7_GPIO12",
+            "net": "TCON_INT",
+            "type": "bidirectional"
+          },
+          "9": {
+            "name": "D8_GPIO8",
+            "net": "SPI_SCLK",
+            "type": "bidirectional"
+          },
+          "10": {
+            "name": "D9_GPIO9",
+            "net": "SPI_MISO",
+            "type": "bidirectional"
+          },
+          "11": {
+            "name": "D10_GPIO10",
+            "net": "SPI_MOSI",
+            "type": "bidirectional"
+          },
+          "14": {
+            "name": "5V_VBUS",
+            "net": "XIAO_5V",
+            "type": "power_in"
+          },
+          "12": {
+            "name": "3V3_OUT",
+            "net": "3V3_SYS",
+            "type": "power_out"
+          },
+          "22": {
+            "name": "3V3_OUT",
+            "net": "3V3_SYS",
+            "type": "passive"
+          },
+          "16": {
+            "name": "MTDO_GPIO5_ADC",
+            "net": "BAT_ADC",
+            "type": "input"
+          },
+          "15": {
+            "name": "MTDI_GPIO3",
+            "net": null,
+            "type": "bidirectional"
+          },
+          "17": {
+            "name": "EN",
+            "net": null,
+            "type": "input"
+          },
+          "19": {
+            "name": "MTMS_GPIO2",
+            "net": null,
+            "type": "bidirectional"
+          },
+          "20": {
+            "name": "MTCK_GPIO4",
+            "net": null,
+            "type": "bidirectional"
+          },
+          "21": {
+            "name": "BOOT_GPIO28",
+            "net": null,
+            "type": "input"
+          },
+          "23": {
+            "name": "BAT_LIPO_ONLY",
+            "net": null,
+            "type": "passive"
+          },
+          "25": {
+            "name": "PAD",
+            "net": null,
+            "type": "passive"
+          },
+          "13": {
+            "name": "GND",
+            "net": "GND",
+            "type": "power_in"
+          },
+          "18": {
+            "name": "GND",
+            "net": "GND",
+            "type": "passive"
+          },
+          "24": {
+            "name": "GND",
+            "net": "GND",
+            "type": "passive"
+          }
+        }
+      },
+      "after": {
+        "value": "XIAO ESP32-C5 V1.1",
+        "footprint": "IRIS_Local:XIAO-ESP32-C5-SMD",
+        "pins": {
+          "1": {
+            "name": "D0_GPIO1",
+            "net": "PWR_OFF",
+            "type": "bidirectional"
+          },
+          "2": {
+            "name": "D1_GPIO0",
+            "net": "SPI_CS_N",
+            "type": "bidirectional"
+          },
+          "3": {
+            "name": "D2_GPIO25",
+            "net": null,
+            "type": "bidirectional"
+          },
+          "4": {
+            "name": "D3_GPIO7",
+            "net": "BUS_EN",
+            "type": "bidirectional"
+          },
+          "5": {
+            "name": "D4_GPIO23",
+            "net": "NFC_SDA",
+            "type": "bidirectional"
+          },
+          "6": {
+            "name": "D5_GPIO24",
+            "net": "NFC_SCL",
+            "type": "bidirectional"
+          },
+          "7": {
+            "name": "D6_GPIO11",
+            "net": null,
+            "type": "bidirectional"
+          },
+          "8": {
+            "name": "D7_GPIO12",
+            "net": "TCON_INT",
+            "type": "bidirectional"
+          },
+          "9": {
+            "name": "D8_GPIO8",
+            "net": "SPI_SCLK",
+            "type": "bidirectional"
+          },
+          "10": {
+            "name": "D9_GPIO9",
+            "net": "SPI_MISO",
+            "type": "bidirectional"
+          },
+          "11": {
+            "name": "D10_GPIO10",
+            "net": "SPI_MOSI",
+            "type": "bidirectional"
+          },
+          "14": {
+            "name": "5V_VBUS",
+            "net": "XIAO_5V",
+            "type": "power_in"
+          },
+          "12": {
+            "name": "3V3_OUT",
+            "net": "3V3_SYS",
+            "type": "power_out"
+          },
+          "22": {
+            "name": "3V3_OUT",
+            "net": "3V3_SYS",
+            "type": "passive"
+          },
+          "16": {
+            "name": "MTDO_GPIO5_ADC",
+            "net": "BAT_ADC",
+            "type": "input"
+          },
+          "15": {
+            "name": "MTDI_GPIO3",
+            "net": null,
+            "type": "bidirectional"
+          },
+          "17": {
+            "name": "EN",
+            "net": null,
+            "type": "input"
+          },
+          "19": {
+            "name": "MTMS_GPIO2",
+            "net": null,
+            "type": "bidirectional"
+          },
+          "20": {
+            "name": "MTCK_GPIO4",
+            "net": null,
+            "type": "bidirectional"
+          },
+          "21": {
+            "name": "BOOT_GPIO28",
+            "net": null,
+            "type": "input"
+          },
+          "23": {
+            "name": "BAT_LIPO_ONLY",
+            "net": null,
+            "type": "passive"
+          },
+          "25": {
+            "name": "PAD",
+            "net": null,
+            "type": "passive"
+          },
+          "13": {
+            "name": "GND",
+            "net": "GND",
+            "type": "power_in"
+          },
+          "18": {
+            "name": "GND",
+            "net": "GND",
+            "type": "passive"
+          },
+          "24": {
+            "name": "GND",
+            "net": "GND",
+            "type": "passive"
+          }
+        }
+      }
+    },
+    "L1": {
+      "before": {
+        "value": "0.47uH SRP4020CC-R47M",
+        "footprint": "IRIS_Local:Bourns_SRP4020CC",
+        "pins": {
+          "1": {
+            "name": "1",
+            "net": "VBAT",
+            "type": "passive"
+          },
+          "2": {
+            "name": "2",
+            "net": "SW",
+            "type": "passive"
+          }
+        }
+      },
+      "after": {
+        "value": "1uH MWSA0518S-1R0MT",
+        "footprint": "IRIS_Local:Sunlord_MWSA0518S",
+        "pins": {
+          "1": {
+            "name": "1",
+            "net": "VBAT",
+            "type": "passive"
+          },
+          "2": {
+            "name": "2",
+            "net": "SW",
+            "type": "passive"
+          }
+        }
+      }
+    },
+    "Q7": {
+      "before": {
+        "value": "2N7002",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "pins": {
+          "1": {
+            "name": "G",
+            "net": "BUS_EN",
+            "type": "input"
+          },
+          "3": {
+            "name": "D",
+            "net": "OE_MID",
+            "type": "passive"
+          },
+          "2": {
+            "name": "S",
+            "net": "GND",
+            "type": "passive"
+          }
+        }
+      },
+      "after": {
+        "value": "2N7002",
+        "footprint": "Package_TO_SOT_SMD:SOT-23",
+        "pins": {
+          "1": {
+            "name": "G",
+            "net": "BUS_EN",
+            "type": "input"
+          },
+          "3": {
+            "name": "D",
+            "net": "BUS_OE_N",
+            "type": "passive"
+          },
+          "2": {
+            "name": "S",
+            "net": "GND",
+            "type": "passive"
+          }
+        }
+      }
+    },
+    "U3": {
+      "before": {
+        "value": "NT3H2111W0FTTJ",
+        "footprint": "Package_SO:TSSOP-8_3x3mm_P0.65mm",
+        "pins": {
+          "1": {
+            "name": "LA",
+            "net": "NFC_LA",
+            "type": "passive"
+          },
+          "8": {
+            "name": "LB",
+            "net": "NFC_LB",
+            "type": "passive"
+          },
+          "7": {
+            "name": "VOUT_EH",
+            "net": "RF_EH",
+            "type": "power_out"
+          },
+          "3": {
+            "name": "SCL",
+            "net": "NFC_SCL",
+            "type": "input"
+          },
+          "5": {
+            "name": "SDA",
+            "net": "NFC_SDA",
+            "type": "bidirectional"
+          },
+          "4": {
+            "name": "FD",
+            "net": null,
+            "type": "open_collector"
+          },
+          "6": {
+            "name": "VCC",
+            "net": "3V3_SYS",
+            "type": "power_in"
+          },
+          "2": {
+            "name": "GND",
+            "net": "GND",
+            "type": "power_in"
+          }
+        }
+      },
+      "after": {
+        "value": "NT3H2111W0FHKH",
+        "footprint": "IRIS_Local:NXP_SOT902-3_XQFN8_1.6x1.6mm",
+        "pins": {
+          "1": {
+            "name": "LA",
+            "net": "NFC_LA",
+            "type": "passive"
+          },
+          "8": {
+            "name": "LB",
+            "net": "NFC_LB",
+            "type": "passive"
+          },
+          "7": {
+            "name": "VOUT_EH",
+            "net": "RF_EH",
+            "type": "power_out"
+          },
+          "3": {
+            "name": "SCL",
+            "net": "NFC_SCL",
+            "type": "input"
+          },
+          "5": {
+            "name": "SDA",
+            "net": "NFC_SDA",
+            "type": "bidirectional"
+          },
+          "4": {
+            "name": "FD",
+            "net": null,
+            "type": "open_collector"
+          },
+          "6": {
+            "name": "VCC",
+            "net": "3V3_SYS",
+            "type": "power_in"
+          },
+          "2": {
+            "name": "GND",
+            "net": "GND",
+            "type": "power_in"
+          }
+        }
+      }
+    }
+  },
+  "errors": [],
+  "note": "RevC intentionally changes the circuit; this is an authorized revision audit, not an unchanged-network claim."
+}

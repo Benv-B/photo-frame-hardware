@@ -1,0 +1,164 @@
+[
+  {
+    "config": {
+      "name": "selected_plus20_v3_t-10",
+      "mode": "rf",
+      "ccold_nf": 56.4,
+      "cgate_nf": 2,
+      "vbat": 3,
+      "temp": -10,
+      "gpio_collapse": true
+    },
+    "returncode": 0,
+    "measures": {
+      "en_cold": 0.001257121,
+      "en_hold": 2.999533,
+      "eh_before_clear": 0.0004399007,
+      "en_off": 9.423127e-07,
+      "ncol_hold": 0.01395362,
+      "ncol_off": 2.999245,
+      "delay_set": 0.0009529689,
+      "delay_clear": 0.001894896
+    },
+    "pass": true
+  },
+  {
+    "config": {
+      "name": "selected_plus20_v3_t25",
+      "mode": "rf",
+      "ccold_nf": 56.4,
+      "cgate_nf": 2,
+      "vbat": 3,
+      "temp": 25,
+      "gpio_collapse": true
+    },
+    "returncode": 0,
+    "measures": {
+      "en_cold": 0.001285381,
+      "en_hold": 2.999979,
+      "eh_before_clear": 0.001337635,
+      "en_off": 2.224953e-06,
+      "ncol_hold": 0.01142231,
+      "ncol_off": 2.999319,
+      "delay_set": 0.0008155253,
+      "delay_clear": 0.002019726
+    },
+    "pass": true
+  },
+  {
+    "config": {
+      "name": "selected_plus20_v3_t60",
+      "mode": "rf",
+      "ccold_nf": 56.4,
+      "cgate_nf": 2,
+      "vbat": 3,
+      "temp": 60,
+      "gpio_collapse": true
+    },
+    "returncode": 0,
+    "measures": {
+      "en_cold": 0.001306745,
+      "en_hold": 3.000359,
+      "eh_before_clear": 0.01627286,
+      "en_off": 0.0002050558,
+      "ncol_hold": 0.009039634,
+      "ncol_off": 2.999393,
+      "delay_set": 0.0006945183,
+      "delay_clear": 0.002187329
+    },
+    "pass": true
+  },
+  {
+    "config": {
+      "name": "selected_plus20_v4.8_t-10",
+      "mode": "rf",
+      "ccold_nf": 56.4,
+      "cgate_nf": 2,
+      "vbat": 4.8,
+      "temp": -10,
+      "gpio_collapse": true
+    },
+    "returncode": 0,
+    "measures": {
+      "en_cold": 0.001737995,
+      "en_hold": 4.79944,
+      "eh_before_clear": 0.0004458453,
+      "en_off": 1.472794e-06,
+      "ncol_hold": 0.01103095,
+      "ncol_off": 4.799228,
+      "delay_set": 0.0006688293,
+      "delay_clear": 0.00215009
+    },
+    "pass": true
+  },
+  {
+    "config": {
+      "name": "selected_plus20_v4.8_t25",
+      "mode": "rf",
+      "ccold_nf": 56.4,
+      "cgate_nf": 2,
+      "vbat": 4.8,
+      "temp": 25,
+      "gpio_collapse": true
+    },
+    "returncode": 0,
+    "measures": {
+      "en_cold": 0.001774185,
+      "en_hold": 4.79984,
+      "eh_before_clear": 0.001344413,
+      "en_off": 2.76124e-06,
+      "ncol_hold": 0.009329811,
+      "ncol_off": 4.799302,
+      "delay_set": 0.0005670511,
+      "delay_clear": 0.00226943
+    },
+    "pass": true
+  },
+  {
+    "config": {
+      "name": "selected_plus20_v4.8_t60",
+      "mode": "rf",
+      "ccold_nf": 56.4,
+      "cgate_nf": 2,
+      "vbat": 4.8,
+      "temp": 60,
+      "gpio_collapse": true
+    },
+    "returncode": 0,
+    "measures": {
+      "en_cold": 0.001799153,
+      "en_hold": 4.800181,
+      "eh_before_clear": 0.01628292,
+      "en_off": 0.0002056546,
+      "ncol_hold": 0.007612689,
+      "ncol_off": 4.799377,
+      "delay_set": 0.0004796116,
+      "delay_clear": 0.002436278
+    },
+    "pass": true
+  },
+  {
+    "config": {
+      "name": "selected_47nf_waveform",
+      "mode": "rf",
+      "ccold_nf": 47,
+      "cgate_nf": 2,
+      "vbat": 4.8,
+      "temp": 25,
+      "gpio_collapse": true,
+      "waveform": true
+    },
+    "returncode": 0,
+    "measures": {
+      "en_cold": 0.001770771,
+      "en_hold": 4.79984,
+      "eh_before_clear": 0.001344413,
+      "en_off": 2.743612e-06,
+      "ncol_hold": 0.009329811,
+      "ncol_off": 4.799804,
+      "delay_set": 0.000508525,
+      "delay_clear": 0.00216104
+    },
+    "pass": true
+  }
+]

@@ -1,0 +1,2735 @@
+{
+  "result": "PASS",
+  "generated_utc": "2026-10-16T10:35:02.848994+00:00",
+  "kicad_version": "10.0.6",
+  "board": "D:\\toy\\photo_frame\\photo-frame-hardware\\hardware\\iris_xiao_c5_revC\\IRIS_C5_RevC.kicad_pcb",
+  "board_sha256": "50352ad8f1dafc3c7b861436a7404bf7afee84123b50a44a4ce712bc81d03d96",
+  "native_netlist": "D:\\toy\\photo_frame\\photo-frame-hardware\\hardware\\iris_xiao_c5_revC\\output\\native_netlist.xml",
+  "native_netlist_sha256": "fb2de8ecbce2ba2a81bc0501f5ef6d1259384abc26c2dfdf075621f70f295015",
+  "schematic_components": 62,
+  "electrical_board_footprints": 62,
+  "logical_physical_pin_ids": 225,
+  "connected_pin_ids": 188,
+  "explicit_nc_pin_ids": 37,
+  "numbered_electrical_copper_pad_instances": 227,
+  "duplicate_pin_pad_instances": {
+    "SW1.1": 2,
+    "SW1.2": 2
+  },
+  "ignored_npth_mounting_holes": [
+    "H1",
+    "H2",
+    "H3",
+    "H4"
+  ],
+  "ignored_unnumbered_paste_apertures": {
+    "J3": 41,
+    "U2": 2,
+    "U3": 8
+  },
+  "unconnected_fpc_mechanical_pads": [
+    {
+      "reference": "J3",
+      "pin": "MP",
+      "net": ""
+    },
+    {
+      "reference": "J3",
+      "pin": "MP",
+      "net": ""
+    }
+  ],
+  "component_checks": [
+    {
+      "reference": "C1",
+      "result": "PASS",
+      "value": "22uF/10V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/1a16eda4-2de0-5d9b-a5c8-23d4c9278449"
+    },
+    {
+      "reference": "C10",
+      "result": "PASS",
+      "value": "DNP / tune",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/54cd347c-7eb4-569c-a17e-477e73f11f33"
+    },
+    {
+      "reference": "C11",
+      "result": "PASS",
+      "value": "47nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/c50237dd-f8ca-5246-93c8-bcfb3e6b7217"
+    },
+    {
+      "reference": "C12",
+      "result": "PASS",
+      "value": "10nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/4cc41d41-c9b7-54ed-8e2e-3049f1acab61"
+    },
+    {
+      "reference": "C13",
+      "result": "PASS",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/5bcb1977-16d2-5bcc-8b40-cbac9aeb7062"
+    },
+    {
+      "reference": "C14",
+      "result": "PASS",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/721d3977-9699-5b21-80c0-63ddaaeef81f"
+    },
+    {
+      "reference": "C15",
+      "result": "PASS",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/f6705637-3260-51a0-b062-a9de17f14a31"
+    },
+    {
+      "reference": "C2",
+      "result": "PASS",
+      "value": "22uF/10V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/cd6af0d2-8e1e-5c71-adeb-87426e83444a"
+    },
+    {
+      "reference": "C3",
+      "result": "PASS",
+      "value": "47uF/10V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/70da012b-7821-5aee-b293-0b2717488346"
+    },
+    {
+      "reference": "C4",
+      "result": "PASS",
+      "value": "47uF/10V",
+      "footprint": "Capacitor_SMD:C_1206_3216Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/108973ba-c863-57f1-9ceb-ad6d741ca083"
+    },
+    {
+      "reference": "C5",
+      "result": "PASS",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/83a416a2-5737-5629-ba48-86a33b977f41"
+    },
+    {
+      "reference": "C6",
+      "result": "PASS",
+      "value": "1.2nF/50V",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/9fdc6243-02e1-5293-bf16-60f4f38fbd83"
+    },
+    {
+      "reference": "C7",
+      "result": "PASS",
+      "value": "10uF/10V",
+      "footprint": "Capacitor_SMD:C_0805_2012Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/483bdb6f-e135-5b3b-b158-befccc64dc47"
+    },
+    {
+      "reference": "C8",
+      "result": "PASS",
+      "value": "100nF",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/5d5d49e9-ad22-5873-91e2-3972857104cb"
+    },
+    {
+      "reference": "C9",
+      "result": "PASS",
+      "value": "180nF*",
+      "footprint": "Capacitor_SMD:C_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/4ae8dd3b-203f-5fa0-8850-03bfd7a0a868"
+    },
+    {
+      "reference": "D1",
+      "result": "PASS",
+      "value": "SS14",
+      "footprint": "Diode_SMD:D_SMA",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/389fcf68-ccf2-5156-b3fb-d71517542980"
+    },
+    {
+      "reference": "D2",
+      "result": "PASS",
+      "value": "1N4148W",
+      "footprint": "Diode_SMD:D_SOD-123",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/d1ae87f6-f83a-5d0c-9196-1741110428f1"
+    },
+    {
+      "reference": "F1",
+      "result": "PASS",
+      "value": "2A fuse*",
+      "footprint": "Fuse:Fuse_1206_3216Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/68423ce9-d861-50d6-8574-8ed1456a2421"
+    },
+    {
+      "reference": "J1",
+      "result": "PASS",
+      "value": "BAT+ / BAT-",
+      "footprint": "IRIS_Local:Battery_Wire_2P",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/cf851cdf-3b75-5a87-8caf-0b31ee7dcf2e"
+    },
+    {
+      "reference": "J2",
+      "result": "PASS",
+      "value": "Tuned 13.56MHz coil",
+      "footprint": "IRIS_Local:Battery_Wire_2P",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/85692f1e-e248-5f5f-bd12-f666e1f809e3"
+    },
+    {
+      "reference": "J3",
+      "result": "PASS",
+      "value": "FH26W-39S-0.3SHW(60)",
+      "footprint": "IRIS_Local:Hirose_FH26-39S-0.3SHW_2Rows-39Pins-1MP_P0.60mm_Horizontal",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/90a50398-2cbb-5d13-859d-b2d1eefaf490"
+    },
+    {
+      "reference": "JP1",
+      "result": "PASS",
+      "value": "OPEN for USB debug",
+      "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/17f79b7d-f9e9-594c-b2b9-7376b36c641b"
+    },
+    {
+      "reference": "L1",
+      "result": "PASS",
+      "value": "1uH MWSA0518S-1R0MT",
+      "footprint": "IRIS_Local:Sunlord_MWSA0518S",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/7eefe112-56ec-5420-9be5-bcfd5dae8693"
+    },
+    {
+      "reference": "Q1",
+      "result": "PASS",
+      "value": "AO3401A",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/dced343c-f73a-56e9-8bbf-526986508612"
+    },
+    {
+      "reference": "Q2",
+      "result": "PASS",
+      "value": "AO3400A",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/2c7783d4-3f78-51db-9dc1-325cc08d993f"
+    },
+    {
+      "reference": "Q3",
+      "result": "PASS",
+      "value": "BC847B",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/133dcb0a-5b42-5be3-89d4-f7674cdd1732"
+    },
+    {
+      "reference": "Q4",
+      "result": "PASS",
+      "value": "BC857C",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/066c6753-2ebe-5242-a5b4-2e9193a08686"
+    },
+    {
+      "reference": "Q5",
+      "result": "PASS",
+      "value": "BC847B / CLEAR",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/0a2f53e4-a6a8-540e-87f7-e80bb8511709"
+    },
+    {
+      "reference": "Q7",
+      "result": "PASS",
+      "value": "2N7002",
+      "footprint": "Package_TO_SOT_SMD:SOT-23",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/586154c7-89df-5392-9d88-fd5b2c676630"
+    },
+    {
+      "reference": "R1",
+      "result": "PASS",
+      "value": "787k 0.1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/d942a718-af2e-58a1-8c98-1408d0a9522d"
+    },
+    {
+      "reference": "R10",
+      "result": "PASS",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/745d9d9e-63d9-5dd6-ba80-35f8f290b23f"
+    },
+    {
+      "reference": "R11",
+      "result": "PASS",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/da5e05e4-2163-5156-a3d0-ce3b0326c123"
+    },
+    {
+      "reference": "R12",
+      "result": "PASS",
+      "value": "10k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/06894cbb-a5e6-506a-bbb5-86e6b258cb38"
+    },
+    {
+      "reference": "R13",
+      "result": "PASS",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/a1adf5be-0ef0-5bcd-8e6b-54ad83ccb009"
+    },
+    {
+      "reference": "R14",
+      "result": "PASS",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/68f86db8-7396-5353-9fb1-4fd27f1a5bdd"
+    },
+    {
+      "reference": "R15",
+      "result": "PASS",
+      "value": "47k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/5b72ba3f-29c6-5f9a-90b9-60c959951bd5"
+    },
+    {
+      "reference": "R16",
+      "result": "PASS",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/6d2511a4-0397-5db3-b45d-28dbef1fb4ae"
+    },
+    {
+      "reference": "R18",
+      "result": "PASS",
+      "value": "33R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/0cd91464-250b-5690-b203-c8a7b9811cf9"
+    },
+    {
+      "reference": "R19",
+      "result": "PASS",
+      "value": "33R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/68f387d4-ee35-5adc-bbfc-d193d06c1f76"
+    },
+    {
+      "reference": "R2",
+      "result": "PASS",
+      "value": "100k 0.1%",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/07fdba0f-1830-5260-b740-2391d4fd138a"
+    },
+    {
+      "reference": "R20",
+      "result": "PASS",
+      "value": "33R",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/38c81323-c053-5dc5-abc1-3f737007356c"
+    },
+    {
+      "reference": "R21",
+      "result": "PASS",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/4b131faf-a364-5d78-927a-f1209864a5ba"
+    },
+    {
+      "reference": "R22",
+      "result": "PASS",
+      "value": "150k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/9564a3a4-33ca-5f27-a222-80f46eb03ab3"
+    },
+    {
+      "reference": "R23",
+      "result": "PASS",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/77737d37-3c3a-554b-a905-a4aef85ccc92"
+    },
+    {
+      "reference": "R24",
+      "result": "PASS",
+      "value": "4.7k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/51f9902c-9aff-5a8e-b087-211a8e46a517"
+    },
+    {
+      "reference": "R25",
+      "result": "PASS",
+      "value": "47k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/669f9088-8499-525c-bc8b-bae0ebbd6c0b"
+    },
+    {
+      "reference": "R26",
+      "result": "PASS",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/9bb17ada-b17d-532f-8faf-576ba44ab2f0"
+    },
+    {
+      "reference": "R27",
+      "result": "PASS",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/ac140c30-2b38-5094-8182-2116c9b443fa"
+    },
+    {
+      "reference": "R28",
+      "result": "PASS",
+      "value": "1M",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/1fc69b01-3fd6-5010-86d9-c6e7d935453d"
+    },
+    {
+      "reference": "R29",
+      "result": "PASS",
+      "value": "330k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/3415a198-f38b-557f-80d6-c169b2cfdbc5"
+    },
+    {
+      "reference": "R4",
+      "result": "PASS",
+      "value": "10R pulse*",
+      "footprint": "Resistor_SMD:R_2512_6332Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/49276c2e-75a3-5fd1-8ca2-d184a9e769ed"
+    },
+    {
+      "reference": "R5",
+      "result": "PASS",
+      "value": "22k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/b84489f1-018c-5d34-ba70-b1ccc54ed0f4"
+    },
+    {
+      "reference": "R6",
+      "result": "PASS",
+      "value": "470k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/47cb81b3-18b1-5550-96f1-5e06b8bdbc29"
+    },
+    {
+      "reference": "R7",
+      "result": "PASS",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/c0270444-d6bb-5772-a46f-6e4e0b7b99e0"
+    },
+    {
+      "reference": "R8",
+      "result": "PASS",
+      "value": "47k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/b0cdd515-1673-502a-9f04-38d6c3d5eed2"
+    },
+    {
+      "reference": "R9",
+      "result": "PASS",
+      "value": "100k",
+      "footprint": "Resistor_SMD:R_0603_1608Metric",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/f858bc65-4a7c-5941-96a5-43589f89dfbb"
+    },
+    {
+      "reference": "SW1",
+      "result": "PASS",
+      "value": "WAKE",
+      "footprint": "Button_Switch_SMD:SW_SPST_TL3342",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/ba66f602-96d0-5fb0-bcfa-5dfaa3925535"
+    },
+    {
+      "reference": "U1",
+      "result": "PASS",
+      "value": "TPS61023DRLR",
+      "footprint": "IRIS_Local:TI_DRL0006A",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/c372eaa9-09f1-5be0-949b-990818241eb2"
+    },
+    {
+      "reference": "U2",
+      "result": "PASS",
+      "value": "TPS22975DSGR",
+      "footprint": "IRIS_Local:Texas_DSG0008A_WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/d9f6605c-0fa4-59f8-af5b-2ba674da50a4"
+    },
+    {
+      "reference": "U3",
+      "result": "PASS",
+      "value": "NT3H2111W0FHKH",
+      "footprint": "IRIS_Local:NXP_SOT902-3_XQFN8_1.6x1.6mm",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/f147eb4b-b672-56e4-9683-ca66bf411d7f/43d07ce5-91d6-5ed0-acce-3bce40e26e3f"
+    },
+    {
+      "reference": "U4",
+      "result": "PASS",
+      "value": "XIAO ESP32-C5 V1.1",
+      "footprint": "IRIS_Local:XIAO-ESP32-C5-SMD",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/4729449c-0b6b-5b04-9e57-5d88981f167b"
+    },
+    {
+      "reference": "U5",
+      "result": "PASS",
+      "value": "SN74CB3Q3245PWR",
+      "footprint": "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm",
+      "path": "/2b8e467a-f339-56bf-b5f3-6dbc18f14500/18680d99-d665-5484-9a00-814a3a858ddb/17cbe461-b1d5-5e0a-9ae4-85a4bbdb116e"
+    }
+  ],
+  "pin_checks": [
+    {
+      "reference": "C1",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "VBAT",
+      "physical_pad_nets": [
+        "VBAT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C1",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C10",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(J2-LA)",
+      "physical_pad_nets": [
+        "Net-(J2-LA)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C10",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "Net-(J2-LB)",
+      "physical_pad_nets": [
+        "Net-(J2-LB)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C11",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "VBAT",
+      "physical_pad_nets": [
+        "VBAT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C11",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "P_BASE",
+      "physical_pad_nets": [
+        "P_BASE"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C12",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "EN_LATCH",
+      "physical_pad_nets": [
+        "EN_LATCH"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C12",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C13",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(Q5-B)",
+      "physical_pad_nets": [
+        "Net-(Q5-B)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C13",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C14",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "3V3_SYS",
+      "physical_pad_nets": [
+        "3V3_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C14",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C15",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "BAT_ADC",
+      "physical_pad_nets": [
+        "BAT_ADC"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C15",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C2",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "VBAT",
+      "physical_pad_nets": [
+        "VBAT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C2",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C3",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "5V_BOOST",
+      "physical_pad_nets": [
+        "5V_BOOST"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C3",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C4",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "5V_BOOST",
+      "physical_pad_nets": [
+        "5V_BOOST"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C4",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C5",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "5V_BOOST",
+      "physical_pad_nets": [
+        "5V_BOOST"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C5",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C6",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(U2-CT)",
+      "physical_pad_nets": [
+        "Net-(U2-CT)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C6",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C7",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C7",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C8",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "3V3_SYS",
+      "physical_pad_nets": [
+        "3V3_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C8",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C9",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "RF_EH",
+      "physical_pad_nets": [
+        "RF_EH"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "C9",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "D1",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(D1-K)",
+      "physical_pad_nets": [
+        "Net-(D1-K)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "D1",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "D2",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(D2-K)",
+      "physical_pad_nets": [
+        "Net-(D2-K)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "D2",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "RF_EH",
+      "physical_pad_nets": [
+        "RF_EH"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "F1",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(J1-BAT+)",
+      "physical_pad_nets": [
+        "Net-(J1-BAT+)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "F1",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "Net-(Q1-D)",
+      "physical_pad_nets": [
+        "Net-(Q1-D)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J1",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(J1-BAT+)",
+      "physical_pad_nets": [
+        "Net-(J1-BAT+)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J1",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J2",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(J2-LA)",
+      "physical_pad_nets": [
+        "Net-(J2-LA)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J2",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "Net-(J2-LB)",
+      "physical_pad_nets": [
+        "Net-(J2-LB)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "10",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "11",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-D2+-Pad11)",
+      "physical_pad_nets": [
+        "unconnected-(J3-D2+-Pad11)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "12",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-D2--Pad12)",
+      "physical_pad_nets": [
+        "unconnected-(J3-D2--Pad12)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "13",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "14",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-CLK+-Pad14)",
+      "physical_pad_nets": [
+        "unconnected-(J3-CLK+-Pad14)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "15",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-CLK--Pad15)",
+      "physical_pad_nets": [
+        "unconnected-(J3-CLK--Pad15)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "16",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "17",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-D1+-Pad17)",
+      "physical_pad_nets": [
+        "unconnected-(J3-D1+-Pad17)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "18",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-D1--Pad18)",
+      "physical_pad_nets": [
+        "unconnected-(J3-D1--Pad18)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "19",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "20",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-D0+-Pad20)",
+      "physical_pad_nets": [
+        "unconnected-(J3-D0+-Pad20)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "21",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-D0--Pad21)",
+      "physical_pad_nets": [
+        "unconnected-(J3-D0--Pad21)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "22",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "23",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-NC-Pad23)",
+      "physical_pad_nets": [
+        "unconnected-(J3-NC-Pad23)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "24",
+      "classification": "connected",
+      "expected_net": "FPC_INT",
+      "physical_pad_nets": [
+        "FPC_INT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "25",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "26",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-NC-Pad26)",
+      "physical_pad_nets": [
+        "unconnected-(J3-NC-Pad26)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "27",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-NC-Pad27)",
+      "physical_pad_nets": [
+        "unconnected-(J3-NC-Pad27)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "28",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-NC-Pad28)",
+      "physical_pad_nets": [
+        "unconnected-(J3-NC-Pad28)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "29",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-NC-Pad29)",
+      "physical_pad_nets": [
+        "unconnected-(J3-NC-Pad29)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "3",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "30",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-NC-Pad30)",
+      "physical_pad_nets": [
+        "unconnected-(J3-NC-Pad30)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "31",
+      "classification": "connected",
+      "expected_net": "Net-(J3-AGINGEN)",
+      "physical_pad_nets": [
+        "Net-(J3-AGINGEN)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "32",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-NC-Pad32)",
+      "physical_pad_nets": [
+        "unconnected-(J3-NC-Pad32)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "33",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-NC-Pad33)",
+      "physical_pad_nets": [
+        "unconnected-(J3-NC-Pad33)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "34",
+      "classification": "connected",
+      "expected_net": "FPC_SCLK",
+      "physical_pad_nets": [
+        "FPC_SCLK"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "35",
+      "classification": "connected",
+      "expected_net": "FPC_MOSI",
+      "physical_pad_nets": [
+        "FPC_MOSI"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "36",
+      "classification": "connected",
+      "expected_net": "FPC_MISO",
+      "physical_pad_nets": [
+        "FPC_MISO"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "37",
+      "classification": "connected",
+      "expected_net": "FPC_CS_N",
+      "physical_pad_nets": [
+        "FPC_CS_N"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "38",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-NC-Pad38)",
+      "physical_pad_nets": [
+        "unconnected-(J3-NC-Pad38)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "39",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-NC-Pad39)",
+      "physical_pad_nets": [
+        "unconnected-(J3-NC-Pad39)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "4",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "5",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "6",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "7",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "8",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-D3+-Pad8)",
+      "physical_pad_nets": [
+        "unconnected-(J3-D3+-Pad8)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "J3",
+      "pin": "9",
+      "classification": "NC",
+      "expected_net": "unconnected-(J3-D3--Pad9)",
+      "physical_pad_nets": [
+        "unconnected-(J3-D3--Pad9)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "JP1",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(D1-K)",
+      "physical_pad_nets": [
+        "Net-(D1-K)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "JP1",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "XIAO_5V",
+      "physical_pad_nets": [
+        "XIAO_5V"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "L1",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "VBAT",
+      "physical_pad_nets": [
+        "VBAT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "L1",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "Net-(U1-SW)",
+      "physical_pad_nets": [
+        "Net-(U1-SW)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q1",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q1",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "VBAT",
+      "physical_pad_nets": [
+        "VBAT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q1",
+      "pin": "3",
+      "classification": "connected",
+      "expected_net": "Net-(Q1-D)",
+      "physical_pad_nets": [
+        "Net-(Q1-D)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q2",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "N_COL",
+      "physical_pad_nets": [
+        "N_COL"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q2",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q2",
+      "pin": "3",
+      "classification": "connected",
+      "expected_net": "Net-(Q2-D)",
+      "physical_pad_nets": [
+        "Net-(Q2-D)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q3",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "SET_BASE",
+      "physical_pad_nets": [
+        "SET_BASE"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q3",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q3",
+      "pin": "3",
+      "classification": "connected",
+      "expected_net": "N_COL",
+      "physical_pad_nets": [
+        "N_COL"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q4",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "P_BASE",
+      "physical_pad_nets": [
+        "P_BASE"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q4",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "VBAT",
+      "physical_pad_nets": [
+        "VBAT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q4",
+      "pin": "3",
+      "classification": "connected",
+      "expected_net": "EN_LATCH",
+      "physical_pad_nets": [
+        "EN_LATCH"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q5",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(Q5-B)",
+      "physical_pad_nets": [
+        "Net-(Q5-B)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q5",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q5",
+      "pin": "3",
+      "classification": "connected",
+      "expected_net": "SET_BASE",
+      "physical_pad_nets": [
+        "SET_BASE"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q7",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "BUS_EN",
+      "physical_pad_nets": [
+        "BUS_EN"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q7",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "Q7",
+      "pin": "3",
+      "classification": "connected",
+      "expected_net": "BUS_OE_N",
+      "physical_pad_nets": [
+        "BUS_OE_N"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R1",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "5V_BOOST",
+      "physical_pad_nets": [
+        "5V_BOOST"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R1",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "FB",
+      "physical_pad_nets": [
+        "FB"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R10",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "SET_BASE",
+      "physical_pad_nets": [
+        "SET_BASE"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R10",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R11",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "EN_LATCH",
+      "physical_pad_nets": [
+        "EN_LATCH"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R11",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R12",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "PWR_OFF",
+      "physical_pad_nets": [
+        "PWR_OFF"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R12",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "Net-(Q5-B)",
+      "physical_pad_nets": [
+        "Net-(Q5-B)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R13",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(Q5-B)",
+      "physical_pad_nets": [
+        "Net-(Q5-B)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R13",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R14",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(R14-Pad1)",
+      "physical_pad_nets": [
+        "Net-(R14-Pad1)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R14",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "SET_BASE",
+      "physical_pad_nets": [
+        "SET_BASE"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R15",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "3V3_SYS",
+      "physical_pad_nets": [
+        "3V3_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R15",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "BUS_OE_N",
+      "physical_pad_nets": [
+        "BUS_OE_N"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R16",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "BUS_EN",
+      "physical_pad_nets": [
+        "BUS_EN"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R16",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R18",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(U5-B1)",
+      "physical_pad_nets": [
+        "Net-(U5-B1)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R18",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "FPC_SCLK",
+      "physical_pad_nets": [
+        "FPC_SCLK"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R19",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(U5-B2)",
+      "physical_pad_nets": [
+        "Net-(U5-B2)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R19",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "FPC_MOSI",
+      "physical_pad_nets": [
+        "FPC_MOSI"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R2",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "FB",
+      "physical_pad_nets": [
+        "FB"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R2",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R20",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(U5-B4)",
+      "physical_pad_nets": [
+        "Net-(U5-B4)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R20",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "FPC_CS_N",
+      "physical_pad_nets": [
+        "FPC_CS_N"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R21",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R21",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "FPC_CS_N",
+      "physical_pad_nets": [
+        "FPC_CS_N"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R22",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "FPC_CS_N",
+      "physical_pad_nets": [
+        "FPC_CS_N"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R22",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R23",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "3V3_SYS",
+      "physical_pad_nets": [
+        "3V3_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R23",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "NFC_SDA",
+      "physical_pad_nets": [
+        "NFC_SDA"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R24",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "3V3_SYS",
+      "physical_pad_nets": [
+        "3V3_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R24",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "NFC_SCL",
+      "physical_pad_nets": [
+        "NFC_SCL"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R25",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "3V3_SYS",
+      "physical_pad_nets": [
+        "3V3_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R25",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "SPI_CS_N",
+      "physical_pad_nets": [
+        "SPI_CS_N"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R26",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(J3-AGINGEN)",
+      "physical_pad_nets": [
+        "Net-(J3-AGINGEN)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R26",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R27",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "PWR_OFF",
+      "physical_pad_nets": [
+        "PWR_OFF"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R27",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R28",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "EN_LATCH",
+      "physical_pad_nets": [
+        "EN_LATCH"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R28",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "BAT_ADC",
+      "physical_pad_nets": [
+        "BAT_ADC"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R29",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "BAT_ADC",
+      "physical_pad_nets": [
+        "BAT_ADC"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R29",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R4",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R4",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "Net-(Q2-D)",
+      "physical_pad_nets": [
+        "Net-(Q2-D)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R5",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(D2-K)",
+      "physical_pad_nets": [
+        "Net-(D2-K)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R5",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "SET_BASE",
+      "physical_pad_nets": [
+        "SET_BASE"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R6",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "RF_EH",
+      "physical_pad_nets": [
+        "RF_EH"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R6",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R7",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "VBAT",
+      "physical_pad_nets": [
+        "VBAT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R7",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "P_BASE",
+      "physical_pad_nets": [
+        "P_BASE"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R8",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "P_BASE",
+      "physical_pad_nets": [
+        "P_BASE"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R8",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "N_COL",
+      "physical_pad_nets": [
+        "N_COL"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R9",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "EN_LATCH",
+      "physical_pad_nets": [
+        "EN_LATCH"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "R9",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "SET_BASE",
+      "physical_pad_nets": [
+        "SET_BASE"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "SW1",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "VBAT",
+      "physical_pad_nets": [
+        "VBAT",
+        "VBAT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "SW1",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "Net-(R14-Pad1)",
+      "physical_pad_nets": [
+        "Net-(R14-Pad1)",
+        "Net-(R14-Pad1)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U1",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "FB",
+      "physical_pad_nets": [
+        "FB"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U1",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "EN_LATCH",
+      "physical_pad_nets": [
+        "EN_LATCH"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U1",
+      "pin": "3",
+      "classification": "connected",
+      "expected_net": "VBAT",
+      "physical_pad_nets": [
+        "VBAT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U1",
+      "pin": "4",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U1",
+      "pin": "5",
+      "classification": "connected",
+      "expected_net": "Net-(U1-SW)",
+      "physical_pad_nets": [
+        "Net-(U1-SW)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U1",
+      "pin": "6",
+      "classification": "connected",
+      "expected_net": "5V_BOOST",
+      "physical_pad_nets": [
+        "5V_BOOST"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U2",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "5V_BOOST",
+      "physical_pad_nets": [
+        "5V_BOOST"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U2",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "5V_BOOST",
+      "physical_pad_nets": [
+        "5V_BOOST"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U2",
+      "pin": "3",
+      "classification": "connected",
+      "expected_net": "EN_LATCH",
+      "physical_pad_nets": [
+        "EN_LATCH"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U2",
+      "pin": "4",
+      "classification": "connected",
+      "expected_net": "5V_BOOST",
+      "physical_pad_nets": [
+        "5V_BOOST"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U2",
+      "pin": "5",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U2",
+      "pin": "6",
+      "classification": "connected",
+      "expected_net": "Net-(U2-CT)",
+      "physical_pad_nets": [
+        "Net-(U2-CT)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U2",
+      "pin": "7",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U2",
+      "pin": "8",
+      "classification": "connected",
+      "expected_net": "5V_SYS",
+      "physical_pad_nets": [
+        "5V_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U2",
+      "pin": "9",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U3",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "Net-(J2-LA)",
+      "physical_pad_nets": [
+        "Net-(J2-LA)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U3",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U3",
+      "pin": "3",
+      "classification": "connected",
+      "expected_net": "NFC_SCL",
+      "physical_pad_nets": [
+        "NFC_SCL"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U3",
+      "pin": "4",
+      "classification": "NC",
+      "expected_net": "unconnected-(U3-FD-Pad4)",
+      "physical_pad_nets": [
+        "unconnected-(U3-FD-Pad4)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U3",
+      "pin": "5",
+      "classification": "connected",
+      "expected_net": "NFC_SDA",
+      "physical_pad_nets": [
+        "NFC_SDA"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U3",
+      "pin": "6",
+      "classification": "connected",
+      "expected_net": "3V3_SYS",
+      "physical_pad_nets": [
+        "3V3_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U3",
+      "pin": "7",
+      "classification": "connected",
+      "expected_net": "RF_EH",
+      "physical_pad_nets": [
+        "RF_EH"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U3",
+      "pin": "8",
+      "classification": "connected",
+      "expected_net": "Net-(J2-LB)",
+      "physical_pad_nets": [
+        "Net-(J2-LB)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "1",
+      "classification": "connected",
+      "expected_net": "PWR_OFF",
+      "physical_pad_nets": [
+        "PWR_OFF"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "10",
+      "classification": "connected",
+      "expected_net": "SPI_MISO",
+      "physical_pad_nets": [
+        "SPI_MISO"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "11",
+      "classification": "connected",
+      "expected_net": "SPI_MOSI",
+      "physical_pad_nets": [
+        "SPI_MOSI"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "12",
+      "classification": "connected",
+      "expected_net": "3V3_SYS",
+      "physical_pad_nets": [
+        "3V3_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "13",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "14",
+      "classification": "connected",
+      "expected_net": "XIAO_5V",
+      "physical_pad_nets": [
+        "XIAO_5V"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "15",
+      "classification": "NC",
+      "expected_net": "unconnected-(U4-MTDI_GPIO3-Pad15)",
+      "physical_pad_nets": [
+        "unconnected-(U4-MTDI_GPIO3-Pad15)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "16",
+      "classification": "connected",
+      "expected_net": "BAT_ADC",
+      "physical_pad_nets": [
+        "BAT_ADC"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "17",
+      "classification": "NC",
+      "expected_net": "unconnected-(U4-EN-Pad17)",
+      "physical_pad_nets": [
+        "unconnected-(U4-EN-Pad17)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "18",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "19",
+      "classification": "NC",
+      "expected_net": "unconnected-(U4-MTMS_GPIO2-Pad19)",
+      "physical_pad_nets": [
+        "unconnected-(U4-MTMS_GPIO2-Pad19)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "SPI_CS_N",
+      "physical_pad_nets": [
+        "SPI_CS_N"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "20",
+      "classification": "NC",
+      "expected_net": "unconnected-(U4-MTCK_GPIO4-Pad20)",
+      "physical_pad_nets": [
+        "unconnected-(U4-MTCK_GPIO4-Pad20)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "21",
+      "classification": "NC",
+      "expected_net": "unconnected-(U4-BOOT_GPIO28-Pad21)",
+      "physical_pad_nets": [
+        "unconnected-(U4-BOOT_GPIO28-Pad21)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "22",
+      "classification": "connected",
+      "expected_net": "3V3_SYS",
+      "physical_pad_nets": [
+        "3V3_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "23",
+      "classification": "NC",
+      "expected_net": "unconnected-(U4-BAT_LIPO_ONLY-Pad23)",
+      "physical_pad_nets": [
+        "unconnected-(U4-BAT_LIPO_ONLY-Pad23)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "24",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "25",
+      "classification": "NC",
+      "expected_net": "unconnected-(U4-PAD-Pad25)",
+      "physical_pad_nets": [
+        "unconnected-(U4-PAD-Pad25)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "3",
+      "classification": "NC",
+      "expected_net": "unconnected-(U4-D2_GPIO25-Pad3)",
+      "physical_pad_nets": [
+        "unconnected-(U4-D2_GPIO25-Pad3)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "4",
+      "classification": "connected",
+      "expected_net": "BUS_EN",
+      "physical_pad_nets": [
+        "BUS_EN"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "5",
+      "classification": "connected",
+      "expected_net": "NFC_SDA",
+      "physical_pad_nets": [
+        "NFC_SDA"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "6",
+      "classification": "connected",
+      "expected_net": "NFC_SCL",
+      "physical_pad_nets": [
+        "NFC_SCL"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "7",
+      "classification": "NC",
+      "expected_net": "unconnected-(U4-D6_GPIO11-Pad7)",
+      "physical_pad_nets": [
+        "unconnected-(U4-D6_GPIO11-Pad7)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "8",
+      "classification": "connected",
+      "expected_net": "TCON_INT",
+      "physical_pad_nets": [
+        "TCON_INT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U4",
+      "pin": "9",
+      "classification": "connected",
+      "expected_net": "SPI_SCLK",
+      "physical_pad_nets": [
+        "SPI_SCLK"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "1",
+      "classification": "NC",
+      "expected_net": "unconnected-(U5-NC-Pad1)",
+      "physical_pad_nets": [
+        "unconnected-(U5-NC-Pad1)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "10",
+      "classification": "connected",
+      "expected_net": "GND",
+      "physical_pad_nets": [
+        "GND"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "11",
+      "classification": "NC",
+      "expected_net": "unconnected-(U5-B8-Pad11)",
+      "physical_pad_nets": [
+        "unconnected-(U5-B8-Pad11)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "12",
+      "classification": "NC",
+      "expected_net": "unconnected-(U5-B7-Pad12)",
+      "physical_pad_nets": [
+        "unconnected-(U5-B7-Pad12)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "13",
+      "classification": "NC",
+      "expected_net": "unconnected-(U5-B6-Pad13)",
+      "physical_pad_nets": [
+        "unconnected-(U5-B6-Pad13)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "14",
+      "classification": "connected",
+      "expected_net": "FPC_INT",
+      "physical_pad_nets": [
+        "FPC_INT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "15",
+      "classification": "connected",
+      "expected_net": "Net-(U5-B4)",
+      "physical_pad_nets": [
+        "Net-(U5-B4)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "16",
+      "classification": "connected",
+      "expected_net": "FPC_MISO",
+      "physical_pad_nets": [
+        "FPC_MISO"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "17",
+      "classification": "connected",
+      "expected_net": "Net-(U5-B2)",
+      "physical_pad_nets": [
+        "Net-(U5-B2)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "18",
+      "classification": "connected",
+      "expected_net": "Net-(U5-B1)",
+      "physical_pad_nets": [
+        "Net-(U5-B1)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "19",
+      "classification": "connected",
+      "expected_net": "BUS_OE_N",
+      "physical_pad_nets": [
+        "BUS_OE_N"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "2",
+      "classification": "connected",
+      "expected_net": "SPI_SCLK",
+      "physical_pad_nets": [
+        "SPI_SCLK"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "20",
+      "classification": "connected",
+      "expected_net": "3V3_SYS",
+      "physical_pad_nets": [
+        "3V3_SYS"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "3",
+      "classification": "connected",
+      "expected_net": "SPI_MOSI",
+      "physical_pad_nets": [
+        "SPI_MOSI"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "4",
+      "classification": "connected",
+      "expected_net": "SPI_MISO",
+      "physical_pad_nets": [
+        "SPI_MISO"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "5",
+      "classification": "connected",
+      "expected_net": "SPI_CS_N",
+      "physical_pad_nets": [
+        "SPI_CS_N"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "6",
+      "classification": "connected",
+      "expected_net": "TCON_INT",
+      "physical_pad_nets": [
+        "TCON_INT"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "7",
+      "classification": "NC",
+      "expected_net": "unconnected-(U5-A6-Pad7)",
+      "physical_pad_nets": [
+        "unconnected-(U5-A6-Pad7)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "8",
+      "classification": "NC",
+      "expected_net": "unconnected-(U5-A7-Pad8)",
+      "physical_pad_nets": [
+        "unconnected-(U5-A7-Pad8)"
+      ],
+      "result": "PASS"
+    },
+    {
+      "reference": "U5",
+      "pin": "9",
+      "classification": "NC",
+      "expected_net": "unconnected-(U5-A8-Pad9)",
+      "physical_pad_nets": [
+        "unconnected-(U5-A8-Pad9)"
+      ],
+      "result": "PASS"
+    }
+  ],
+  "errors": [],
+  "method": "Read native schematic XML and saved PCB with pcbnew. Compare every electrical physical pad net, including duplicated pad numbers and 37 NC pin IDs; compare value, footprint library ID, and full schematic instance path.",
+  "scope": "Pad net assignment and component identity parity only. Native PCB DRC must separately verify actual routed copper connectivity, clearance, and fabrication rules."
+}

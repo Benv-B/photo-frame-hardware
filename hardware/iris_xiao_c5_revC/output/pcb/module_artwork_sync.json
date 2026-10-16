@@ -1,0 +1,5 @@
+{
+  "footprint": "XIAO-ESP32-C5-SMD",
+  "pad_geometry_unchanged": true,
+  "change": "13 USB/module artwork shapes moved from F.SilkS to F.Fab; original module/pad dimensions preserved"
+}
