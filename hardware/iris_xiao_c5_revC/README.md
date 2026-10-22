@@ -22,7 +22,7 @@
 
 ## 文件入口
 
-- `IRIS_C5_RevC.kicad_pro`：KiCad9工程，打开已有原理图无需运行生成脚本。
+- `IRIS_C5_RevC.kicad_pro`：保存的板图需 KiCad 10.0.6 或更新兼容版本，打开已有原理图无需运行生成脚本。
 - `output/IRIS_C5_RevC_schematic.pdf`：三页原理图。
 - `output/BOM.csv`：元件参数和封装；`PROCUREMENT.md`：采购证据及尚未锁定的物料。
 - `output/native_netlist.xml`、`output/pin_connections.csv`：实际网表及逐引脚连接。
@@ -76,7 +76,7 @@ J3.1–6供电，7/10/13/16/19/22/25接地，31脚AGINGEN下拉；SPI模式不�
 
 1. 启动先保持PWR_OFF=0、BUS_EN=0、SPI_CS_N=1。取消原PG_N检查；等待公共电源启动完成后再开启总线。首版可从100ms供电等待开始调试，最终以实测稳定时间确定，这不是PG检测的等效反馈。
 2. 按IRIS应用说明完成TCON初始化、复位/唤醒和状态查询。原文复位后等待300ms、唤醒后5ms；10英寸刷新超时至少留15s。
-3. ESP32Drop收图，转换为1024×768 BGR888，再按IRIS协议发送和刷新。完整像素帧2.25MiB；接收、解码和Wi-Fi仍需额外内存。C5上的ESP32Drop移植尚未实机验证。
+3. ESP32Drop收图，转换为1024×768 BGR888，再按IRIS协议发送和刷新。完整像素帧2.25MiB；接收、解码和Wi-Fi仍需额外内存。2026-10-21 已完成 C5 AirDrop 到实屏的样机验证，详见固件仓库的 docs/iris-tcon.md。
 4. 等TCON真实完成，再置BUS_EN=0。经NFC I²C读取RF_FIELD_PRESENT，确认手机场已消失至少500ms，再置PWR_OFF=1。U3.FD不用。
 5. 添加接收超时、错误退出、看门狗和电池ADC判断。没有PG或新增硬件欠压锁定，因此软件不能假设电源在所有负载下都已经稳定。
 
@@ -86,7 +86,7 @@ USB调试时拔JP1。仅USB供XIAO、TCON未供电时必须保持BUS_EN=0；需�
 
 225个实体引脚：188个连接、37个明确NC。原生KiCad网表与RevC冻结清单逐引脚比较；预期修订审计要求只有U1/U2/U3/U4/Q7/L1/R1修改、R3/R17/Q6/Q8删除，其余55件保持不变。最终原生ERC为0错误、0警告；原理图PDF均逐页查看。
 
-实物尚未焊接。TPS61023的3.7A为典型谷值开关限流，不是5V输出3.7A；整机实际启动/刷新电流和三AA压降需要样机验证，不承诺能覆盖屏幕资料中的3A浪涌。TCON要求5.0–5.5V、0.5–10ms电源边沿、断电间隔至少50ms；C6、放电R4、保险丝F1为首版值。
+2026-10-21 实板已完成色条和 iPhone 照片刷新；以下供电边界仍需进一步测量。TPS61023的3.7A为典型谷值开关限流，不是5V输出3.7A；整机实际启动/刷新电流和三AA压降需要样机验证，不承诺能覆盖屏幕资料中的3A浪涌。TCON要求5.0–5.5V、0.5–10ms电源边沿、断电间隔至少50ms；C6、放电R4、保险丝F1为首版值。
 
 `validation/nfc_latch/`保留RevB锁存的ngspice验证，该部分电路未改。它只验证等效RF触发/清除等情形，不是实物NFC、TPS61023或TCON带载验证。`validation/before_layout/`是沿用的RevB历史资料，RevC当前结果以output目录为准。
 
